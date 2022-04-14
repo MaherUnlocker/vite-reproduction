@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@maherunlocker/custom-react-table-component": "^1.2.1",
+    "@maherunlocker/custom-react-table": "1.13.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-table": "^7.7.0"
@@ -17,6 +17,7 @@
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
+    "babel-plugin-macros": "^3.1.0",
     "typescript": "^4.5.4",
     "vite": "^2.9.0"
   }

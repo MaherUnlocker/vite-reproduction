@@ -1,8 +1,9 @@
 import React from 'react'
 import {DynamicTable} from '@maherunlocker/custom-react-table'
+
 function App() {
   const [count, setCount] = useState(0)
-      const [filterActive, setLocalFilterActive] = React.useState<boolean>(false);
+  const [filterActive, setLocalFilterActive] = React.useState<boolean>(false);
   const [selectedRows, setSelectedRows] = React.useState<any[]>([]);
   const [dataIsUpdated, setDataIsUpdated] = React.useState<boolean | number>(false);
  
