@@ -1,45 +1,59 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import Dynamictable from @maherunlocker/react-table-component
-import {usetable} from 'react-table' 
+import React from 'react'
+import {DynamicTable} from '@maherunlocker/custom-react-table'
 function App() {
   const [count, setCount] = useState(0)
-
+      const [filterActive, setLocalFilterActive] = React.useState<boolean>(false);
+  const [selectedRows, setSelectedRows] = React.useState<any[]>([]);
+  const [dataIsUpdated, setDataIsUpdated] = React.useState<boolean | number>(false);
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    
+    
+      <DynamicTable
+        //put your backed api url it's obligation  to get your date from api
+        
+        url='http://localhost:4000/client'
+        // url='http://localhost:4000/cards'
+
+        //optionnal props
+         name="mytable"
+        // --->here for add custom component in the end of table
+        //actionColumn={SelectAccountDropdown}
+        // --->here you can add component side Filter Button
+        customJsxSideFilterButton={<FilterSideComponent />}
+        // --->here for grouping columns with same name
+        canGroupBy
+        // --->here for sorting table
+        canSort
+        // --->here for resizing with of column
+        canResize
+        // --->here for row and subrows
+        canExpand
+        // --->here showing checkbox in the begin of RowTable with return you the checked rows
+        canSelect
+       // setSelectedRows={setSelectedRows}
+        // --->here showing global filter input on the top of table
+        showGlobalFilter
+        // --->here showing  filter button  on the top of table
+        showFilter
+        filterActive={filterActive}
+        setLocalFilterActive={setLocalFilterActive}
+        // --->here add action header with delete and duplicate
+        canDeleteOrDuplicate
+        
+        // --->here you can add any column to the table in the specified place with custom name and customjsx
+        //arrayOfCustomColumns={arrayOfCustomColumns}
+        // --->here  if you don't have any other click in row you can use to get clicked row details
+        onClick={(row: any) => console.log(row.original)}
+
+        // when you update your backend set dataIsUpdated to true to render table
+        setDataIsUpdated={setDataIsUpdated}
+        dataIsUpdated={dataIsUpdated}
+        
+       
+
+      />
+   
   )
 }
 
