@@ -1,5 +1,5 @@
 import React from "react";
-import { DynamicTable } from "custom-react-table-responsive";
+import { DynamicTable } from "@maherunlocker/custom-react-table-responsive";
 function App() {
   const [count, setCount] = React.useState(0);
   const [filterActive, setLocalFilterActive] = React.useState<boolean>(false);
@@ -19,7 +19,7 @@ function App() {
       // --->here for add custom component in the end of table
       //actionColumn={SelectAccountDropdown}
       // --->here you can add component side Filter Button
-      customJsxSideFilterButton={<FilterSideComponent />}
+      // customJsxSideFilterButton={<FilterSideComponent />}
       // --->here for grouping columns with same name
       canGroupBy
       // --->here for sorting table

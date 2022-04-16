@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "custom-react-table-responsive": "/Volumes/data/React/custom-react-table-full",
+    "@maherunlocker/custom-react-table-responsive": "^2.0.0",
+    "bootstrap": "4.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-table": "^7.7.0",
