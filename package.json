@@ -8,10 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@maherunlocker/custom-react-table": "1.13.5",
+    "custom-react-table-responsive": "/Volumes/data/React/custom-react-table-full",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-table": "^7.7.0"
+    "react-table": "^7.7.0",
+    "vite-plugin-commonjs-externals": "^0.1.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
