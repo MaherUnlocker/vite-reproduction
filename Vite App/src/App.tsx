@@ -11,7 +11,7 @@ function App() {
     <DynamicTable
       //put your backed api url it's obligation  to get your date from api
 
-      url="http://localhost:4000/client"
+      url="http://localhost:4000/categories"
       // url='http://localhost:4000/cards'
 
       //optionnal props

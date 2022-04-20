@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "extends": "airbnb",
+    "max-len": ["warn", { "code": 80 }],
+  }
+}
